@@ -1,7 +1,7 @@
 class Node{
     int val;
     Node next;
-    Node (int val){
+    Node (int val){ // parameterized constructor
         this.val = val;
     }
 }
