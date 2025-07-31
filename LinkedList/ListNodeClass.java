@@ -14,6 +14,14 @@ public class ListNodeClass {
             temp = temp.next;
         }
     }
+
+    public static void DisplayRecursive(Node head){
+        if(head==null){
+            return;
+        }
+        System.out.println(head.val);
+        DisplayRecursive(head.next);
+    }
     public static void main(String[] args) {
 
         // initialization
@@ -62,6 +70,8 @@ public class ListNodeClass {
 
         System.out.println("Displaying LinkedList using function:");
         print(a);
+        System.out.println("Displaying LinkedList using recursion");
+        DisplayRecursive(a);
     }
 
 }
