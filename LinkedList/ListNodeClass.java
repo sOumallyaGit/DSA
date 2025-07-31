@@ -22,8 +22,15 @@ public class ListNodeClass {
         System.out.println(head.val);
         DisplayRecursive(head.next);
     }
-    public static void main(String[] args) {
 
+    public static void ReverseOrder(Node head){
+        if (head == null){
+            return ;
+        }
+        ReverseOrder(head.next);
+        System.out.println(head.val);
+    }
+    public static void main(String[] args) {
         // initialization
         Node a = new Node(10);
         Node b = new Node(20);
@@ -72,6 +79,8 @@ public class ListNodeClass {
         print(a);
         System.out.println("Displaying LinkedList using recursion");
         DisplayRecursive(a);
+        System.out.println("Displaying LinkedList in reverse using recursion");
+        ReverseOrder(a);
     }
 
 }
