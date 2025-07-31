@@ -52,7 +52,7 @@ public class ListNodeClass {
         System.out.println(a.next.next.next.val);
         System.out.println(a.next.next.next.next.val);
 
-        // Displaying Linkedlist using temp
+        // Displaying Linkedlist using temp for loop
         System.out.println("Displaying LinkedList using temp:");
         Node temp = a;
         for (int i = 0; i < 5; i++) {
