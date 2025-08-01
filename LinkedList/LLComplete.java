@@ -33,6 +33,18 @@ class SinglyLL{
     void Length(){
         System.out.println("The Length of your LinkedList is :"+size);
     }
+
+    void insertAtHead(int val){
+        LLNode temp = new LLNode(val);
+        if(head==null){
+            head=temp;
+            tail=temp;
+        }else{
+            temp.next=head;
+            head = temp;
+        }
+        size++;
+    }
 }
 
 public class LLComplete {
@@ -41,6 +53,7 @@ public class LLComplete {
         LinkedList1.insertAtTail(5);
         LinkedList1.insertAtTail(5);
         LinkedList1.insertAtTail(5);
+        LinkedList1.insertAtHead(10);
         LinkedList1.Display();
         LinkedList1.Length();
     }
