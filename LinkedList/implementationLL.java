@@ -12,6 +12,13 @@ class SinglyLinkedList{ // user defined data structure
             tail = temp;
         }
     }
+    void display(Node head){
+        Node temp = head;
+        while(temp != null){
+            System.out.println(temp.val);
+            temp = temp.next;
+        }
+    }
 }
 
 public class implementationLL {
@@ -27,7 +34,7 @@ public class implementationLL {
         LL.insertAtEnd(10);
         LL.insertAtEnd(20);
         LL.insertAtEnd(30);
-        print(LL.head);
+        LL.display(LL.head); // Displaying the linked list using the display method);
     }
 }
  
