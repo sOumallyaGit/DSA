@@ -1,6 +1,7 @@
 class SinglyLinkedList{ // user defined data structure
     Node head;
     Node tail;
+    int size;
     void insertAtEnd(int val){
         Node temp = new Node(val);
         if(head == null){
@@ -11,6 +12,7 @@ class SinglyLinkedList{ // user defined data structure
             tail.next = temp;
             tail = temp;
         }
+        size++;
     }
     void display(){
         Node temp = head;
@@ -19,6 +21,9 @@ class SinglyLinkedList{ // user defined data structure
             temp = temp.next;
         }
         System.out.println();
+    }
+    void Size(){
+        System.out.println("Your Linked List size is "+ size);
     }
 }
 
@@ -40,6 +45,7 @@ public class implementationLL {
         System.out.println("Adding more elements to the linked list:");
         LL.insertAtEnd(24);
         LL.display(); // Displaying the linked list using the display method);
+        LL.Size(); // Displaying the size of the linked list
     }
 }
  
