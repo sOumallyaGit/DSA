@@ -10,6 +10,7 @@ class SinglyLL{
     LLNode head;
     LLNode tail;
     int size;
+
     void insertAtTail(int val){
         LLNode temp = new LLNode(val);
         if(head == null){
@@ -21,6 +22,19 @@ class SinglyLL{
         }
         size++;
     }
+    
+    void insertAtHead(int val){
+        LLNode temp = new LLNode(val);
+        if(head==null){
+            head=temp;
+            tail=temp;
+        }else{
+            temp.next=head;
+            head = temp;
+        }
+        size++;
+    }
+
     void Display(){
         LLNode temp = head;
         while(temp != null){
@@ -34,17 +48,7 @@ class SinglyLL{
         System.out.println("The Length of your LinkedList is :"+size);
     }
 
-    void insertAtHead(int val){
-        LLNode temp = new LLNode(val);
-        if(head==null){
-            head=temp;
-            tail=temp;
-        }else{
-            temp.next=head;
-            head = temp;
-        }
-        size++;
-    }
+    
 }
 
 public class LLComplete {
