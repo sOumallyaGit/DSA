@@ -36,6 +36,30 @@ class SinglyLinkedList{ // user defined data structure
         }
         size++;
     }
+
+    void insertAtAny(int index, int val){
+        if(index==0){
+            insertAtHead(val);
+            return;
+        }
+        if(index==size){
+            insertAtEnd(val);
+            return;
+        }
+        if(index<0 || index>size){
+            System.out.println("Invalid Index");
+            return ;
+        }
+        Node temp = new Node(val);
+        Node x = head;//for traversing
+        for(int i = 1;i<index;i++){
+            x = x.next;
+        }
+        // insertion part
+        temp.next=x.next;
+        x.next=temp;
+        size++;
+    }
 }
 
 public class implementationLL {
@@ -54,12 +78,16 @@ public class implementationLL {
 
         LL.insertAtHead(40);
 
+
         System.out.println("Displaying elements of the linked list:");
         LL.display();
         System.out.println("Adding more elements to the linked list:");
         LL.insertAtEnd(24);
         LL.display(); // Displaying the linked list using the display method);
         LL.Size(); // Displaying the size of the linked list
+
+        LL.insertAtAny(2,100);
+        LL.display();
     }
 }
  
