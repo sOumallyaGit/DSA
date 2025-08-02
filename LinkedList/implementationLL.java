@@ -60,6 +60,20 @@ class SinglyLinkedList{ // user defined data structure
         x.next=temp;
         size++;
     }
+
+    int get(int index){
+        if(index==size-1){
+            return tail.val;
+        }
+        if(index>=size || index<0){
+            return -1;
+        }
+        Node temp = head;
+        for(int i = 1 ; i<=index ;i++){
+            temp = temp.next;
+        }
+        return temp.val;
+    }
 }
 
 public class implementationLL {
@@ -88,6 +102,8 @@ public class implementationLL {
 
         LL.insertAtAny(2,100);
         LL.display();
+
+        System.out.println(LL.get(0));
     }
 }
  

@@ -70,6 +70,24 @@ class SinglyLL{
         x.next=temp;
         size++;
     }
+
+    int get(int index){
+        if(index==0){
+            return head.val;
+        }
+        if(index==size-1){
+            return tail.val;
+        }
+
+        if(index<0 || index>=size){
+            return -1;
+        }
+        LLNode temp = head;
+        for(int i =1 ; i<=index ; i++){
+            temp=temp.next;
+        }
+        return temp.val;
+    }
 }
 
 public class LLComplete {
@@ -84,5 +102,7 @@ public class LLComplete {
 
         LinkedList1.insert(1,2);
         LinkedList1.Display();
+
+        System.out.println(LinkedList1.get(0));
     }
 }
