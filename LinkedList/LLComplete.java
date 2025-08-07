@@ -88,6 +88,21 @@ class SinglyLL{
         }
         return temp.val;
     }
+
+    void set(int idx , int val){
+        if(idx==size-1) tail.val = val;
+
+        if(idx>=size || idx<0){
+            System.out.println("error");
+        }
+
+        LLNode temp = head;
+        for(int i =1 ;i<=idx;i++){
+            temp = temp.next;
+        }
+        temp.val = val;
+
+    }
 }
 
 public class LLComplete {
@@ -103,6 +118,9 @@ public class LLComplete {
         LinkedList1.insert(1,2);
         LinkedList1.Display();
 
+        LinkedList1.set(1, 0);
+
         System.out.println(LinkedList1.get(0));
+        LinkedList1.Display();
     }
 }
